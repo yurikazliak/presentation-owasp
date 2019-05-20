@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>What is ... </h2>
+				<p>
+					<img width='300' alt='What-bliad' src='./img/Wha, bliat7.jpg' data-lazy-loaded>
+				</p>
+				<h2 class="fragment fade-right">OWASP?</h2>
+			</section>
+			<section>
+				<section>
+					<div style="width: 204px;margin: 0 auto;text-align: left;">
+						<b>O</b>pen<br>
+						<b>W</b>eb<br>
+						<b>A</b>pplication<br>
+						<b>S</b>ecurity<br>
+						<b>P</b>roject.
+					</div>
+
+				</section>
+				<section>
+					This is an open community, dedicated to enabling organizations to develope, purchase and maintain
+					applications and API that can be trusted.
+				</section>
+			</section>
+			<section>
+				The OWASP Top 10 is a regularly-updated report outlining security concerns for web application security,
+				focusing on the 10 most critical risks.
+				First version released in 2004. (tell about versions : then in 2007,2010,2013. Last version in 2017)
+			</section>
+			<section>
+				the owasp top 10 - 2017 :
+				<section> </section>
+				<section> 40+ data submissions </section>
+				<section> this data spans vulnerabilities gathered from hundreds of organizations (so on) </section>
+				<section> What is primary aim? </section>
+			</section>
+			<section>
+				What is major changes at the last few years in front-end?
+			</section>
+			<section>
+				<p>
+					<a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology" target="_blank">OWASP risk
+						rating
+						metodology</a>
+				</p>
+				<img width='800' alt='risks' src='./img/risks.jpg' data-lazy-loaded>
+
+			</section>
+			<section>
+				OWASP Top 10 App security riscks - 2017 <br>
+				A1. Injection
+				<section>
+					<p>
+						injection vulnerability is when an attacker sends malicious data as part of a command or query
+						to an interpreter.
+						If successful, this malicious input will be executed as code,
+						causing the interpreter to execute unintended commands or reveal data which should otherwise be
+						inaccessible.
+					</p>
+				</section>
+				<section>
+					<p><b>When app is vulnerable?</b></p>
+					<br>
+					<p>When website’s failure to filter, validate or sanitise a user’s input.</p>
+				</section>
+				<section>
+					<p>
+						How to prevent?
+					</p>
+					<br>
+					<p>
+						<ul>
+							<li>Filtering, Validating, Encoding and Escaping</li>
+							<li>Query Parameterisation</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3></h3>Examples
+					<div style="font-size: 25px">
+						<p>- Valve paid out $25,000 after an SQL injection was reported in report_xml.php through
+							countryFilter[] parameter. An unvalidated parameter on an partner reporting page (report_xml.php) could be used to read
+							certain SQL data from a single backing database.</p>
+						<p>- Formidable Pro, plugin for WordPress. It was able to gain read access on wordpress database
+							and provided us all the relevant details (PoC) required for us to reproduce the issue.</p>
+					</div>
+				</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A2. Broken Authentication
+				<section> This class of vulnerability covers any weaknesses in the authentication/session management
+					methodology.</section>
+				<section> When app is vulnerable?
+					<ul style="font-size: 25px">
+						<li>Failure to deny automated attacks (brute-forcing, credential stuffing etc).</li>
+						<li>Allows users to have weak or well-known passwords such as password123.</li>
+						<li>Exposes username/password information based on error messages/response times.</li>
+						<li>Implements weak credential recovery and forgotten-password measures. (An interesting article
+							on the weak nature of security questions was published by the NCSC here).</li>
+						<li>Exposes Session IDs in URLs.</li>
+						<li>Fails to implement Session ID switching after a user logs in.</li>
+						<li>Sessions remain active for too long — after a session has exited and remained inactive for a
+							significant period of time.</li>
+					</ul>
+				</section>
+				<section> how to prevent
+					<br>
+					Two-factor authentication (or 2FA) for all logins <br>
+					Ensuring users have sufficiently-strong passwords by implementing validation on password creation.
+					<br>
+					Rate-limit login attempts<br>
+					Blacklist IPs<br>
+					strong Session ID, server-side created, not uncluded in URL
+				</section>
+				<section> example <br>
+					- Uber failed to rate-limit the https://biz.uber.com/confirm endpoint,
+					which would allow an attacker to brute-force business accounts and take rides on behalf of them.
+				</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A3. Sensitive Data Exposure
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A4. XML External Entities (XXE)
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A5.Broken Access Controls
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A6. Security Misconfiguration
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A7.Cross Site Scripting (XXS)
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A8. Insecure Deserialization
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A9. Using Components with Known Vulnerabilities
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section> OWASP Top 10 App security riscks - 2017 <br>
+				A10. Insufficient Logging & Monitoring
+				<section> </section>
+				<section> when app is vulnerable</section>
+				<section> how to prevent</section>
+			</section>
+			<section>
+				<p><b>Materials :</b></p>
+				<a href="https://www.owasp.org/index.php/Top_10-2017_Top_10" target="_blank">OWASP site</a>
+				<br>
+				<a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" target="_blank">
+					OWASP Top 10 - 2017 PDF</a>
+				<br>
+				<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-1-a540c4ea2df5"
+					target="_blank">Article on Medium, part 1</a>
+				<br>
+				<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-2-3cdb3bebc976"
+					target="_blank">Article on Medium, part 2</a>
+				<br>
+				<img width="200" src="./img/nevsky.jpg" alt='chiken'>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
