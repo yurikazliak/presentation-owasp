@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>OWASP Top 10</title>
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
@@ -28,6 +28,12 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
+				<h2>OWASP Top-10</h2>
+				<p style="font-size: 25px; position: relative; display: flex; float: right; right: 16rem;">
+					Presented by Yuri Kazliak
+				</p>
+			</section>
+			<section>
 				<h2>What is ... </h2>
 				<p>
 					<img width='300' alt='What-bliad' src='./img/Wha, bliat7.jpg' data-lazy-loaded>
@@ -36,88 +42,106 @@
 			</section>
 			<section>
 				<section>
-					<div style="width: 204px;margin: 0 auto;text-align: left;">
-						<b>O</b>pen<br>
-						<b>W</b>eb<br>
-						<b>A</b>pplication<br>
-						<b>S</b>ecurity<br>
-						<b>P</b>roject.
+					<div>
+						<img width="400" alt="wasp" src="./img/300px-Owasp_logo_1c.jpg" data-lazy-loaded="">
 					</div>
-
+					<p>
+						This is an open community, dedicated to enabling organizations to develope, purchase and
+						maintain aplications and API that can be trusted.
+						<br>
+						OWASP is free from commercial pressure and not affilated whith any technology company.
+					</p>
 				</section>
-				<section>
-					This is an open community, dedicated to enabling organizations to develope, purchase and maintain
-					applications and API that can be trusted.
-				</section>
 			</section>
 			<section>
-				The OWASP Top 10 is a regularly-updated report outlining security concerns for web application security,
-				focusing on the 10 most critical risks.
-				First version released in 2004. (tell about versions : then in 2007,2010,2013. Last version in 2017)
+				The OWASP Top 10 is a powerful awareness document for web application security.
+				It represents a broad <i>consensus</i> about the most critical security risks to web applications.
+				First version released in 2004.
 			</section>
 			<section>
-				the owasp top 10 - 2017 :
-				<section> </section>
-				<section> 40+ data submissions </section>
-				<section> this data spans vulnerabilities gathered from hundreds of organizations (so on) </section>
-				<section> What is primary aim? </section>
+				The OWASP top 10 - 2017 :
+				<p> 40+ data submissions from firms that specialized in security</p>
+				<p> This data spans vulnerabilities gathered from hundreds of organizations and over
+					100 000 real-work applications and API's</p>
 			</section>
 			<section>
-				What is major changes at the last few years in front-end?
+				<img width='200' alt='aim' src='./img/primary aim.jpg' data-lazy-loaded>
+				<p>
+					Primary aim is to educate developers, designers, architects, managers, and organizations about most
+					common and most important web application security weaknesses.
+				</p>
 			</section>
 			<section>
 				<p>
 					<a href="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology" target="_blank">OWASP risk
-						rating
-						metodology</a>
+						rating metodology</a>
 				</p>
-				<img width='800' alt='risks' src='./img/risks.jpg' data-lazy-loaded>
-
+				<img width='600' alt='risksWiki' src='./img/risksWiki.png' data-lazy-loaded>
+				<h4>Risk = Likelihood * Impact</h4>
+				<ol style="font-size: 25px">
+					<li>Identifying a Risk</li>
+					<li>Factors for Estimating Likelihood</li>
+					<li>Factors for Estimating Impact</li>
+					<li>Determining Severity of the Risk</li>
+					<li>Deciding What to Fix</li>
+					<li>Customizing Your Risk Rating Model</li>
+				</ol>
 			</section>
 			<section>
-				OWASP Top 10 App security riscks - 2017 <br>
+				<img width='800' alt='risks' src='./img/risks.jpg' data-lazy-loaded>
+			</section>
+			<section>
+				OWASP Top 10 security riscks - 2017 <br>
 				A1. Injection
 				<section>
-					<p>
-						injection vulnerability is when an attacker sends malicious data as part of a command or query
+					<p style="font-size: 25px">
+						Injection vulnerability is when an attacker sends malicious data as part of a command or query
 						to an interpreter.
 						If successful, this malicious input will be executed as code,
 						causing the interpreter to execute unintended commands or reveal data which should otherwise be
 						inaccessible.
 					</p>
+					<img width='400' alt='A1-injection' src='./img/A1 injection.jpg' data-lazy-loaded>
 				</section>
 				<section>
-					<p><b>When app is vulnerable?</b></p>
+					<p>When app is vulnerable?</p>
 					<br>
-					<p>When website’s failure to filter, validate or sanitise a user’s input.</p>
+					<p style="font-size: 25px">When website’s failure to filter, validate or sanitise a user’s input.
+					</p>
 				</section>
 				<section>
 					<p>
 						How to prevent?
 					</p>
-					<br>
-					<p>
-						<ul>
-							<li>Filtering, Validating, Encoding and Escaping</li>
-							<li>Query Parameterisation</li>
-						</ul>
-					</p>
+					<ul style="font-size: 25px">
+						<li>Filtering, Validating, Encoding and Escaping</li>
+						<li>Query Parameterisation</li>
+					</ul>
 				</section>
-				<section>
-					<h3></h3>Examples
+				<section> Examples
 					<div style="font-size: 25px">
-						<p>- Valve paid out $25,000 after an SQL injection was reported in report_xml.php through
-							countryFilter[] parameter. An unvalidated parameter on an partner reporting page (report_xml.php) could be used to read
+						<p>Valve paid out $25,000 after an SQL injection was reported in report_xml.php through
+							countryFilter[] parameter. An unvalidated parameter on an partner reporting page
+							(report_xml.php) could be used to read
 							certain SQL data from a single backing database.</p>
-						<p>- Formidable Pro, plugin for WordPress. It was able to gain read access on wordpress database
+						<br>
+						<p> Formidable Pro, plugin for WordPress. It was able to gain read access on wordpress database
 							and provided us all the relevant details (PoC) required for us to reproduce the issue.</p>
 					</div>
 				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A2. Broken Authentication
-				<section> This class of vulnerability covers any weaknesses in the authentication/session management
-					methodology.</section>
+				<section>
+					<br>
+					<p style="font-size: 25px">
+						This class of vulnerability covers any weaknesses in the authentication/session management
+						methodology.
+					</p>
+					<a href="https://www.slideshare.net/RevistaSG/owasp-top-10-web-application-vulnerabilities">
+						<img width='500' alt='A2-BA' src='./img/A2 bA.jpg' data-lazy-loaded>
+					</a>
+				</section>
 				<section> When app is vulnerable?
 					<ul style="font-size: 25px">
 						<li>Failure to deny automated attacks (brute-forcing, credential stuffing etc).</li>
@@ -131,82 +155,410 @@
 							significant period of time.</li>
 					</ul>
 				</section>
-				<section> how to prevent
-					<br>
-					Two-factor authentication (or 2FA) for all logins <br>
-					Ensuring users have sufficiently-strong passwords by implementing validation on password creation.
-					<br>
-					Rate-limit login attempts<br>
-					Blacklist IPs<br>
-					strong Session ID, server-side created, not uncluded in URL
+				<section> How to prevent?
+					<ul style="font-size: 25px">
+						<li>Two-factor authentication (or 2FA) for all logins</li>
+						<li>Ensuring users have sufficiently-strong passwords by implementing validation on password
+							creation.</li>
+						<li>Rate-limit login attempts</li>
+						<li>Blacklist IPs</li>
+						<li>Strong Session ID, server-side created, not uncluded in URL</li>
+					</ul>
 				</section>
-				<section> example <br>
-					- Uber failed to rate-limit the https://biz.uber.com/confirm endpoint,
-					which would allow an attacker to brute-force business accounts and take rides on behalf of them.
+				<section> Example <br>
+					<p style="font-size: 25px">
+						Uber failed to rate-limit the https://biz.uber.com/confirm endpoint, which would allow an
+						attacker to brute-force business accounts and take rides on behalf of them.
+					</p>
 				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A3. Sensitive Data Exposure
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<br>
+					<p style="font-size: 25px">
+						This vulnerability is when a web application fails to sufficiently protect sensitive
+						data — namely personally identifiable information — which includes (but is not limited to) data
+						points like e-mail addresses, postal addresses, banking information, dates of birth and
+						telephone numbers.
+					</p>
+					<a
+						href="https://medium.com/@BreezeTelecom/sensitive-data-exposure-vulnerability-causes-and-prevention-4c86a19df70d">
+						<img width='500' alt='A3-SDE' src='./img/A3 SDE.jpeg' data-lazy-loaded>
+					</a>
+				</section>
+				<section>
+					<p>When app is vulnerable?</p>
+					<ul style="font-size: 25px">
+						<li>Data is transmitted in clear text (over protocols such as HTTP, FTP and SMTP).</li>
+						<li>Sensitive data is stored server-side in clear text.</li>
+						<li>Known-to-be weak cryptographic algorithms such as MD5 or SHA-1 are used for encryption.</li>
+						<li>Default/weak cryptographic keys are used.</li>
+					</ul>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Identify all data which could be considered ‘sensitive’. Note where and how it is stored, as
+							well as if and how it is transferred.</li>
+						<li>Do not store sensitive data which is no longer needed.</li>
+						<li>Use tokenisation for sensitive financial data</li>
+						<li>Make sure that all stored sensitive data is encrypted with strong algorithms using
+							cryptographic keys which have not been generated using standard/default passwords.</li>
+					</ul>
+				</section>
+				<section> Example <br>
+					<p style="font-size: 25px">
+						Login form on non-HTTP page in one of Chaturbate’s assets allows for a Man-in-the-Middle (MITM)
+						attack where user credentials can be intercepted by an eavesdropping user.
+					</p>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A4. XML External Entities (XXE)
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<p style="font-size: 25px">
+						XML External Entity attacks leverage badly-configured XML processors to read internal files
+						(as portrayed above), file shares and can even be leveraged for remote code execution and DoS
+						attacks.
+					</p>
+					<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-1-a540c4ea2df5">
+						<img width='500' alt='A4' src='./img/A4.png' data-lazy-loaded>
+					</a>
+				</section>
+				<section>
+					<p>When app is vulnerable?</p>
+					<ul style="font-size: 25px">
+						<li>The web app accepts XML or allows for XML uploads — particularly with no validation for the
+							source of the request — which is then parsed by an XML processor.</li>
+						<li>If DTDs (document type definitions) are enabled.</li>
+						<li>If the app uses SAML, since this relies upon XML for identity assertions.</li>
+					</ul>
+				</section>
+				<section>
+					How to prevent?
+					<ul style="font-size: 25px">
+						<li>Disable XML external entity and DTD processing in XML parser(s).</li>
+						<li>Use another data format such as JSON instead of XML.</li>
+						<li>Avoid serialisation of sensitive data.</li>
+						<li>Run Static Application Security Testing programs over relevant code to identify potential
+							vulnerabilities.</li>
+					</ul>
+				</section>
+				<section> Examples <br>
+					<ul style="font-size: 25px">
+						<li>
+							XXE vulnerability was discovered in Twitter of all sites. The exploit was remarkably
+							simple — but paid out a whopping $10,080 due to its severity in allowing an attacker to read
+							local files on the target system. Below is the POST request sent by the attacker, containing
+							an XML payload which then returns the contents of the /etc/passwd file on the system:
+						</li>
+						<li>
+							XXE vulnerability led to an exploit in Rockstar Games’ emblem editor.
+						</li>
+					</ul>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A5.Broken Access Controls
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<p style="font-size: 25px">
+						Broken Access Control is when permission misconfigurations allow attackers to access or modify
+						data/files/accounts that they should otherwise be unable to access.
+					</p>
+					<a
+						href="https://www.lynda.com/IT-tutorials/OWASP-Top-10-5-Broken-Access-Control-6-Security-Misconfiguration/806159-2.html">
+						<img width='500' alt='A5' src='./img/A5.jpg' data-lazy-loaded>
+					</a>
+				</section>
+				<section>When app is vulnerable?
+					<p style="font-size: 25px">
+						In a web application where proper access control is enforced, users will have different access
+						permissions based upon their granted privileges. However, these controls can be mistakenly
+						misconfigured.
+					</p>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Minimise CORS implementation.</li>
+						<li>Log activity for the access of relevant files to document and identify any potential
+							vulnerabilities in your own server.</li>
+						<li>Impose rate-limiting on API and controller access to reduce the potential harm from
+							automated attack tools.</li>
+						<li>All relevant access tokens should be invalidated server-side when a user logs out.</li>
+					</ul>
+				</section>
+				<section> Examples <br>
+					<ul style="font-size: 25px">
+						<li>
+							Improper access control led to a security researcher being able to get the CD keys for any
+							game on Steam.
+						</li>
+						<li>
+							An exposed .bash_history file on http://drivers.razersupport.com meant that any visitor to
+							this endpoint could publicly view the file.
+						</li>
+					</ul>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A6. Security Misconfiguration
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<div style="position: relative; top: 50px">
+						<p style="font-size: 25px">
+							This category of vulnerabilities can include insecure default configurations, incomplete
+							configurations, misconfigured HTTP headers or exposed error messages which guide attackers
+							in their search for vulnerabilities.
+						</p>
+						<a
+							href="https://medium.com/@infosecsanyam/owasp-top-10-2017-web-application-security-risks-31f356491712">
+							<img width='400' alt='A6' src='./img/A6.jpeg' data-lazy-loaded>
+						</a>
+					</div>
+				</section>
+				<section>When app is vulnerable?
+					<ul style="font-size: 25px">
+						A number of different features can constitute misconfigurations, including:
+						<li>Failure to sufficiently harden the application (a lack of firewall, or a misconfigured one).
+						</li>
+						<li>Unnecessary exposure, whether it be in the form of web pages, unused accounts or unrequired
+							services.</li>
+						<li>Default usernames/passwords kept for administrative tools/hardware.</li>
+						<li>The server does not send security headers .</li>
+					</ul>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Take a minimalist approach to your web app — if a feature, framework or function is not
+							required, remove it.
+						</li>
+						<li>Ensure that all available updates and patches are applied as soon as possible.</li>
+						<li>Review cloud storage permissions.</li>
+						<li>Introduce an automated process to routinely check misconfigurations.</li>
+					</ul>
+				</section>
+				<section>Example<br>
+					<p style="font-size: 25px">
+						Misconfigured HTTP headers in U.S. Department of Defense web page
+						(https://www.sfl-tap.army.mil/). While the security-conscious X-XSS-Protection header was
+						included, it was configured with the
+						value DENY which is to be used for the X-Frame Option. The researcher correctly recommended that
+						this should be changed to <span style="font-size: 25px">1; mode=block</span>
+					</p>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A7.Cross Site Scripting (XXS)
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<div style="position: relative; top: 50px">
+						<br>
+						<p style="font-size: 25px">
+							One of the better-known vulnerabilities. Cross-Site Scripting allows an attacker to execute
+							script(s) in a victim’s browser. This can be used to hijack user sessions (by getting
+							cookies,
+							session ID’s and so on), alter the contents of a web page or redirect a user to an evil
+							site.
+						</p>
+						<a
+							href="https://medium.com/@infosecsanyam/owasp-top-10-2017-web-application-security-risks-31f356491712">
+							<img width='550' alt='A7' src='./img/A7.gif' data-lazy-loaded
+								style="background-color: wheat;">
+						</a>
+					</div>
+				</section>
+				<section>
+					<ul style="font-size: 25px">
+						There are two common types:
+						<li style="font-size: 25px">Stored XSS: this is when an injected script is stored on the server
+							in a fixed location.</li>
+						<li style="font-size: 25px">Reflected XSS: this is when an injected script within a request is
+							reflected back in the server’s response.</li>
+						Third, lesser-known XSS attack vector:
+						<li style="font-size: 25px">DOM-based XSS: as the name suggests, this type of XSS differs from
+							the other two types in that it appears in the DOM (Document Object Model) rather than the
+							HTML document.</li>
+					</ul>
+				</section>
+				<section>When app is vulnerable?
+					<ul style="font-size: 25px">
+						<li>Stored & Reflected XSS: the web app or API stores user input which is unsanitised,
+							unescaped, unvalidated or fails to be encoded.</li>
+						<li>DOM-based XSS: JavaScript frameworks, single-page applications and APIs which dynamically
+							include user-inputted data are vulnerable to this type of attack.</li>
+					</ul>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Employ a combination of validating, filtering, encoding and escaping methods to prevent
+							untrusted user input from executing on the web app. The first OWASP cheat sheet listed above
+							goes into extended detail about methods you can use to prevent malicious input executing as
+							intended.</li>
+						<li>Move to frameworks which automatically escape XSS by design (recent Ruby on Rails version,
+							React JS).</li>
+						<li>Enforce secure headers</li>
+					</ul>
+				</section>
+				<section> Examples <br>
+					<ul style="font-size: 25px">
+						<li>
+							A stored XSS vulnerability was discovered in Steam’s react-built chat client.
+						</li>
+						<li>
+							Reflected XSS: at Uber's site.
+						</li>
+						<li>
+							DOM-based XXS: a vulnerability in the DuckDuckGo.
+						</li>
+					</ul>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A8. Insecure Deserialization
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<div style="position: relative; top: 80px">
+						<p style="font-size: 25px">
+							Before data is stored or transmitted, the bits are often serialized so that they can be
+							later restored to the data’s original structure. Reassembling a series of bits back into a
+							file or object is called deserialization. Deserialized data can be modified to include
+							malicious code, which is likely to cause issues if the application does not verify the
+							data’s source or contents before deserialization.
+						</p>
+						<a
+							href="https://www.slideshare.net/joaomatosf_/an-overview-of-deserialization-vulnerabilities-in-the-java-virtual-machine-jvm-h2hc-2017">
+							<img width='400' alt='A8' src='./img/A8.jpg' data-lazy-loaded>
+						</a>
+					</div>
+				</section>
+				<section>When app is vulnerable?
+					<br>
+					<p style="font-size: 25px">
+						Fundamentally, an application is likely vulnerable to this type of attack if it deserialises
+						untrusted or tampered data inputted from a malicious source.
+					</p>
+				</section>
+				<section>How to prevent?
+					<br>
+					<p style="font-size: 25px">
+						As is written in OWASP’s guide,
+						<blockquote>
+							the only safe architectural pattern is not to accept serialised objects from untrusted
+							sources
+							or to use serialisation mediums that only permit primitive data types
+						</blockquote>
+					</p>
+				</section>
+				<section> Example
+					<br>
+					<p style="font-size: 25px">
+						In September 2018, a researcher on HackerOne identified an insecure deserialisation
+						vulnerability in Vanilla Forums which allowed a determined attacker to achieve remote code
+						execution.
+					</p>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A9. Using Components with Known Vulnerabilities
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<br>
+					<p style="font-size: 25px">
+						It is when a web app actively includes components which have publicly-known vulnerabilities.
+					</p>
+					<a href="https://gbhackers.com/9-using-components-known-vulnerabilities/">
+						<img width='550' alt='A9' src='./img/A9.png' data-lazy-loaded style="background-color: wheat;">
+					</a>
+				</section>
+				<section>When app is vulnerable?
+					<ul style="font-size: 25px">
+						<li>If administrators are not aware of all the version info and components running on the web
+							application.</li>
+						<li>If software is vulnerable, unsupported or out of date.</li>
+						<li>If routine checks are not carried out for updates and patches (whether automated or manual).
+						</li>
+					</ul>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Removing unnecessary exposure (unused components/features/files).</li>
+						<li>Keep an up-to-date inventory which documents every component that is used on the web
+							application.</li>
+						<li>Subscribe to security bulletins and e-mail notifications for relevant components that the
+							app uses.</li>
+					</ul>
+				</section>
+				<section> Example <br>
+					<p style="font-size: 25px">
+						Uber. Not only was it using an out-of-date version of WordPress, but it also ran a plugin
+						q-and-a	which had since been removed from WordPress due to having a Full Path Disclosure vulnerability.
+					</p>
+				</section>
 			</section>
-			<section> OWASP Top 10 App security riscks - 2017 <br>
+			<section> OWASP Top 10 security riscks - 2017 <br>
 				A10. Insufficient Logging & Monitoring
-				<section> </section>
-				<section> when app is vulnerable</section>
-				<section> how to prevent</section>
+				<section>
+					<div style="position: relative; top: 40px">
+						<br>
+						<p style="font-size: 25px">
+							Software and systems have monitoring abilities so organizations can see logins,
+							transactions, traffic, and more. By monitoring for suspicious activity, such as failed
+							logins,
+							organizations can potentially see and stop suspicious activity.
+						</p>
+						<a href="https://www.infosecinstitute.com/content-library/insufficient-logging-and-monitoring/">
+							<img width='400' alt='A10' src='./img/a10.png' data-lazy-loaded>
+						</a>
+					</div>
+				</section>
+				<section> When app is vulnerable?
+					<ul style="font-size: 25px">
+						<li>When important events such as logins, login attempts, and significant transactions are not
+							logged.</li>
+						<li>Logs are only stored locally.</li>
+						<li>Alerts and response escalation processes either don’t exist or are ineffective.
+						</li>
+					</ul>
+				</section>
+				<section>How to prevent?
+					<ul style="font-size: 25px">
+						<li>Ensure important events, significant transactions and server-side input validation failures
+							are logged.</li>
+						<li>Create an effective alerting system and policy which allows for potential threats to be
+							dealt with before they escalate.</li>
+						<li>Make sure proper access controls are enforced (such as append-only for log documents) to
+							prevent them from being tampered with.</li>
+					</ul>
+				</section>
+				<section> Example <br>
+					<p style="font-size: 25px">
+						November 2018 Marriott International Data Breach. Reportedly affecting more than 500 million
+						customers, this data breach occurred following hackers gained entry to one of its 2016-acquired
+						subsidiaries — Starwood. The vulnerable network was reported to be the guest reservation
+						service, which attackers had been accessing since 2014. This meant that their presence went
+						unnoticed for over four years with reports emerging in November of 2018 of the data breach.
+					</p>
+				</section>
 			</section>
 			<section>
-				<p><b>Materials :</b></p>
-				<a href="https://www.owasp.org/index.php/Top_10-2017_Top_10" target="_blank">OWASP site</a>
-				<br>
-				<a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" target="_blank">
-					OWASP Top 10 - 2017 PDF</a>
-				<br>
-				<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-1-a540c4ea2df5"
-					target="_blank">Article on Medium, part 1</a>
-				<br>
-				<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-2-3cdb3bebc976"
-					target="_blank">Article on Medium, part 2</a>
-				<br>
+				<h2>That's all, thank you</h2>
 				<img width="200" src="./img/nevsky.jpg" alt='chiken'>
+			</section>
+			<section>
+				<p style="font-size: 30px;">Materials :
+					<br>
+					<br>
+					<a href="https://www.owasp.org/index.php/Top_10-2017_Top_10" target="_blank">OWASP site.</a>
+					<br>
+					<a href="https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf" target="_blank">
+						OWASP Top 10 - 2017 PDF</a>
+					<br>
+					<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-1-a540c4ea2df5"
+						target="_blank">Article at Medium, part 1</a>
+					<br>
+					<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-2-3cdb3bebc976"
+						target="_blank">Article at Medium, part 2</a>
+					<br>
+					<a href="https://medium.com/@infosecsanyam/owasp-top-10-2017-web-application-security-risks-31f356491712"
+						target="_blank">Another article at Medium.</a>
+					<br>
+				</p>
 			</section>
 		</div>
 	</div>
