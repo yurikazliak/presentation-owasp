@@ -2,54 +2,49 @@
 https://yurikazliak.github.io/presentation-owasp/    
 
 (slide 1)    
-My name is Yuri, and i'd like to tell about Open Web Application Security Project, or OWASP.    
-(slide 2)    
-This is a free from commercial pressure and not affilated whith any technology company organization.    
-Almost everyone assotiated whith organization is volunteer.    
+Hello! My name is Yuri, and i'd like to tell you OWASP Top-10.    
+(slide 2 "What is... OWASP?")  
+What is OWASP?    
+(slide 3)  
+OAWSP is Open Web Application Security Project. This is such type of organization, wich not affilated whifree from commercial pressure and almost everyone, who assotiated whith organization is volunteer.     
 The OWASP most known project whith biggest feedback is :    
 (slide 3)    
-OWASP Top 10 is regulary-updated report. It consists of the top biggest Web Application Security Risks.   
-Primary aim is to educate developers, designers, architects, managers, and organizations about most	common and most important web application security weaknesses.    
-According to risk rating metodology,     
+OWASP Top 10 is regulary-updated report of most	common Web Application Security Risks.   
+Primary aim - is to educate developers, designers, architects, managers, and organizations about most common and most important web application security weaknesses.    
+But before i tell about this report, we must know, that OWASP has their own risk rating metodology,     
 (Slide OWASP Risk rating metology)    
-The OWASP calculate final score of risk, and ranked them, depending on this score:    
+Depending on this metology, they calculate final score of risk, and ranked them, depending on this score:    
 (slide risks table)    
-So, Lets talk about each point in detail.    
+So, lets take a look closure about each of position.    
 (slide A1)    
 First risk is injection.     
 If a website, app, or device incorporates user input within a command, an attacker can insert a “payload” command directly into said input. If that input is not verified, an attacker then “injects” and runs their own commands.     
-Why it is possible?    
-(slide A1 - 2)    
-Because on client side ther is bad filters to validate or sanitise input data, or bad implementation of query parametrisation.    
 How to prevent?    
-(slide A1 - 3)    
-Blacklist of specified symbols - when user can type only letters in login field, for example. Whitelist of accepting input. Encoding 'bad' caracters, after they have been submitted. Using parameterised query.    
+(slide A1 - 2)    
+Blacklist of specified symbols. Whitelist of accepting symbols. Encoding 'bad' caracters, after they have been submitted. Using parameterised query.    
 Next risk is     
 (slide A2)    
 Broken Authentication.    
 Big class of vulnerability covers any weaknesses in authontification/session management.    
-(slide A2 - 2)    
 It happens when developers allow users to have weak or well-known passwords, like password123, or weak password recovery, or allowed long sessions, or not change session ID. Also here is all kind of automated attacks, like brute-forces.    
 How to prevent?    
-(slide A2 - 3)    
+(slide A2 - 2)    
 2 factor autontification, password validaton for strong passwords, Blacklist IP, strong session ID    
 Next.    
 (slide A3)    
 Sensitive Data Exposure    
 This vulnerability is when a web application fails to sufficiently protect sensitive data — namely personally identifiable information    
-(slide A3 - 2)    
 Happens when data is transmitted in clear text, or data is stored in clear text on server side, or used default/weak cryptographic keys.    
 Prevent?    
-(slide A3 - 3)    
+(slide A3 - 2)    
 Identify all data which could be considered ‘sensitive’. Note where and how it is stored, as well as if and how it is transferred. Do not store sensitive data which is no longer needed. Use tokenisation.    
 Next    
 (slide A4)    
 XML External Entities (XXE)    
 Web application may directly accept XML and process it itself, or use XML parser to parse XML input, or file. And sometimes XML document contains referense to external entities. So if attacker put some malicious payload into external entitie, and XML parser doesn't configurate well, this payload coud get run and then it can do bad things. Stole you local passwords, for example.
-(slide A4 - 2)       
 There is one of the examples of this type of attacks, named "Billion laughs". This document's size is about 1kb, but if we send it into XML parser, it will use approximately 3Gb of memory to crunch thru this entire document!    
 Prevent    
-(slide A4 - 3)    
+(slide A4 - 2)    
 Write security-conscious code, avoid serialisation of sensitive data, use JSON instead of XML, run source code analysis tool.    
 Next    
 (slide A5)    
@@ -96,6 +91,7 @@ Insufficient Logging & Monitoring.
 When important events such as logins, login attempts, and significant transactions are not logged.    
 Warnings and errors generate inadequate log messages, or no generate then at all.    
 (slide A10 - 2)    
-All important events, warnings, errors, suspicious activities must be logged!    
+All important events, warnings, errors, suspicious activities must be logged! 
+At the end, i'd like to make summary of my presentation: always check user input, validate it, sanitise it, and dont allow input from unprotected sources, and all well be good!    
 (slide "thank you")    
-So, thats all i want to talk about, thank you for watching!    
+Thank you!    
