@@ -33,13 +33,13 @@
 					Presented by Yuri Kazliak
 				</p>
 			</section>
-			<!-- <section>
+			<section>
 				<h2>What is ... </h2>
 				<p>
-					<img width='300' alt='What-bliad' src='./img/Wha, bliat7.jpg' data-lazy-loaded>
+					<img width='400' alt='What-bliad' src='./img/Wha, bliat7.jpg' data-lazy-loaded>
 				</p>
 				<h2 class="fragment fade-right">OWASP?</h2>
-			</section> -->
+			</section>
 			<section>
 				<section>
 					<div>
@@ -54,16 +54,7 @@
 				</section>
 			</section>
 			<section>
-				<p style="font-size: 30px">
-					The OWASP Top 10 is a powerful awareness document for web application security.
-					It represents a broad <span style="font-style: italic;">consensus</span> about the most critical
-					security risks to web applications.
-				</p>
-				<p style="font-size: 30px">
-					<span style="color: aqua;">Primary aim</span> is to educate developers, designers, architects,
-					managers, and organizations about most
-					common and most important web application security weaknesses.
-				</p>
+				<img width='800' alt='risks' src='./img/owasp.jpeg' data-lazy-loaded>
 			</section>
 			<!-- <section>
 				The OWASP top 10 - 2017 :
@@ -94,22 +85,24 @@
 				OWASP Top 10 security riscks - 2017 <br>
 				<p style="color: coral;">A1. Injection</p>
 				<section>
-					<p style="font-size: 25px">
+					<br>
+					<br>
+					<!-- <p style="font-size: 25px">
 						Injection vulnerability is when an attacker sends malicious data as part of a command or query
 						to an interpreter.
 						If successful, this malicious input will be executed as code,
 						causing the interpreter to execute unintended commands or reveal data which should otherwise be
 						inaccessible.
-					</p>
-					<img width='400' alt='A1-injection' src='./img/A1 injection.jpg' data-lazy-loaded>
+					</p> -->
+					<img width='600' alt='A1-injection' src='./img/fun - A1new.jpg' data-lazy-loaded>
 				</section>
-				<section>
+				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
 					<br>
 					<p style="font-size: 25px">When website, app or device failure to filter, validate or sanitise a
 						user’s input.
 					</p>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -133,15 +126,16 @@
 				<p style="color: coral;">A2. Broken Authentication</p>
 				<section>
 					<br>
-					<p style="font-size: 25px">
+					<br>
+					<!-- <p style="font-size: 25px">
 						This class of vulnerability covers any weaknesses in the authentication/session management
 						methodology.
-					</p>
-					<a href="https://www.slideshare.net/RevistaSG/owasp-top-10-web-application-vulnerabilities">
-						<img width='500' alt='A2-BA' src='./img/A2 bA.jpg' data-lazy-loaded>
-					</a>
+					</p> -->
+					<!-- <a href="https://www.slideshare.net/RevistaSG/owasp-top-10-web-application-vulnerabilities"> -->
+						<img width='500' alt='A2-BA' src='./img/fun - A2.jpg' data-lazy-loaded>
+					<!-- </a> -->
 				</section>
-				<section>
+				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
 					<ul style="font-size: 25px">
 						<li>Failure to deny automated attacks (brute-forcing, credential stuffing etc).</li>
@@ -154,7 +148,7 @@
 						<li>Sessions remain active for too long — after a session has exited and remained inactive for a
 							significant period of time.</li>
 					</ul>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -177,18 +171,19 @@
 				<p style="color: coral;">A3. Sensitive Data Exposure</p>
 				<section>
 					<br>
-					<p style="font-size: 25px">
+					<br>
+					<!-- <p style="font-size: 25px">
 						This vulnerability is when a web application fails to sufficiently protect sensitive
 						data — namely personally identifiable information — which includes (but is not limited to) data
 						points like e-mail addresses, postal addresses, banking information, dates of birth and
 						telephone numbers.
-					</p>
-					<a
-						href="https://medium.com/@BreezeTelecom/sensitive-data-exposure-vulnerability-causes-and-prevention-4c86a19df70d">
-						<img width='500' alt='A3-SDE' src='./img/A3 SDE.jpeg' data-lazy-loaded>
-					</a>
+					</p> -->
+					<!-- <a
+						href="https://medium.com/@BreezeTelecom/sensitive-data-exposure-vulnerability-causes-and-prevention-4c86a19df70d"> -->
+						<img width='600' alt='A3-SDE' src='./img/Fun - A3.gif' data-lazy-loaded>
+					<!-- </a> -->
 				</section>
-				<section>
+				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
 					<ul style="font-size: 25px">
 						<li>Data is transmitted in clear text (over protocols such as HTTP, FTP and SMTP).</li>
@@ -196,7 +191,7 @@
 						<li>Known-to-be weak cryptographic algorithms such as MD5 or SHA-1 are used for encryption.</li>
 						<li>Default/weak cryptographic keys are used.</li>
 					</ul>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -217,17 +212,30 @@
 			</section>
 			<section> OWASP Top 10 security riscks - 2017 <br>
 				<p style="color: coral;">A4. XML External Entities (XXE)</p>
-				<section>
+				<!-- <section>
+					<br>
+					<br>
 					<p style="font-size: 25px">
 						XML External Entity attacks leverage badly-configured XML processors to read internal files
 						(as portrayed above), file shares and can even be leveraged for remote code execution and DoS
 						attacks.
 					</p>
 					<a href="https://medium.com/@cxosmo/owasp-top-10-real-world-examples-part-1-a540c4ea2df5">
-						<img width='500' alt='A4' src='./img/A4.png' data-lazy-loaded>
+						<img width='800' alt='A4' src='./img/A4.png' data-lazy-loaded>
+					</a>
+				</section> -->
+				<section>
+					<br>
+					<br>
+					<h4>
+						Billion Laughs :)
+					</h>
+					<br>
+					<a href="https://ioactive.com/die-laughing-from-a-billion-laughs/">
+						<img width='800' alt='A4' src='./img/A4 Lol Bomb.png' data-lazy-loaded>
 					</a>
 				</section>
-				<section>
+				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
 					<ul style="font-size: 25px">
 						<li>The web app accepts XML or allows for XML uploads — particularly with no validation for the
@@ -235,7 +243,7 @@
 						<li>If DTDs (document type definitions) are enabled.</li>
 						<li>If the app uses SAML, since this relies upon XML for identity assertions.</li>
 					</ul>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -263,13 +271,15 @@
 			<section> OWASP Top 10 security riscks - 2017 <br>
 				<p style="color: coral;">A5.Broken Access Controls</p>
 				<section>
-					<p style="font-size: 25px">
+					<br>
+					<br>
+					<!-- <p style="font-size: 25px">
 						Broken Access Control is when permission misconfigurations allow attackers to access or modify
 						data/files/accounts that they should otherwise be unable to access.
-					</p>
+					</p> -->
 					<a
 						href="https://www.lynda.com/IT-tutorials/OWASP-Top-10-5-Broken-Access-Control-6-Security-Misconfiguration/806159-2.html">
-						<img width='500' alt='A5' src='./img/A5.jpg' data-lazy-loaded>
+						<img width='600' alt='A5' src='./img/fun - A5.jpg' data-lazy-loaded>
 					</a>
 				</section>
 				<!-- <section>
@@ -284,7 +294,7 @@
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<p style="font-size: 25px; color: rgb(201, 187, 180);">There is one simple rule to keep in mind when managing access
 						control: unless the resources must be publicly accessible, deny users from accessing them.
-					</p>
+					</p><!-- 
 					<p style="font-size: 25px">Also, there are some other pointers to mitigate any potential issues:</p>
 					<ul style="font-size: 25px">
 						<li>Minimise CORS implementation.</li>
@@ -293,7 +303,7 @@
 						<li>Impose rate-limiting on API and controller access to reduce the potential harm from
 							automated attack tools.</li>
 						<li>All relevant access tokens should be invalidated server-side when a user logs out.</li>
-					</ul>
+					</ul> -->
 				</section>
 				<!-- <section> Examples <br>
 					<ul style="font-size: 25px">
@@ -312,14 +322,15 @@
 				<p style="color: coral;">A6. Security Misconfiguration</p>
 				<section>
 					<div style="position: relative; top: 50px">
-						<p style="font-size: 25px">
+						<br>
+						<!-- <p style="font-size: 25px">
 							This category of vulnerabilities can include insecure default configurations, incomplete
 							configurations, misconfigured HTTP headers or exposed error messages which guide attackers
 							in their search for vulnerabilities.
-						</p>
+						</p> -->
 						<a
 							href="https://medium.com/@infosecsanyam/owasp-top-10-2017-web-application-security-risks-31f356491712">
-							<img width='400' alt='A6' src='./img/A6.jpeg' data-lazy-loaded>
+							<img width='600' alt='A6' src='./img/fun - a6.jpg' data-lazy-loaded>
 						</a>
 					</div>
 				</section>
@@ -361,21 +372,22 @@
 				<section>
 					<div style="position: relative; top: 50px">
 						<br>
-						<p style="font-size: 25px">
+						<!-- <p style="font-size: 25px">
 							Cross-Site Scripting allows an attacker to execute
 							script(s) in a victim’s browser. This can be used to hijack user sessions (by getting
 							cookies,
 							session ID’s and so on), alter the contents of a web page or redirect a user to an evil
 							site.
-						</p>
-						<a
+						</p> -->
+						<!-- <a
 							href="https://medium.com/@infosecsanyam/owasp-top-10-2017-web-application-security-risks-31f356491712">
-							<img width='550' alt='A7' src='./img/A7.gif' data-lazy-loaded
+							<img width='700' alt='A7' src='./img/A7.gif' data-lazy-loaded
 								style="background-color: wheat;">
-						</a>
+						</a> -->
+						<img width='600' alt='A7' src='./img/Fun - A7-2.png' data-lazy-loaded>
 					</div>
 				</section>
-				<section>
+				<!-- <section>
 					<ul style="font-size: 25px">
 						There are two common types:
 						<li style="font-size: 25px">Stored XSS: this is when an injected script is stored on the server
@@ -396,7 +408,7 @@
 						<li>DOM-based XSS: JavaScript frameworks, single-page applications and APIs which dynamically
 							include user-inputted data are vulnerable to this type of attack.</li>
 					</ul>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -427,16 +439,17 @@
 				<p style="color: coral;">A8. Insecure Deserialization</p>
 				<section>
 					<div style="position: relative; top: 80px">
-						<p style="font-size: 25px">
+						<br>
+						<!-- <p style="font-size: 25px">
 							Before data is stored or transmitted, the bits are often serialized so that they can be
 							later restored to the data’s original structure. Reassembling a series of bits back into a
 							file or object is called deserialization. Deserialized data can be modified to include
 							malicious code, which is likely to cause issues if the application does not verify the
 							data’s source or contents before deserialization.
-						</p>
+						</p> -->
 						<a
 							href="https://www.slideshare.net/joaomatosf_/an-overview-of-deserialization-vulnerabilities-in-the-java-virtual-machine-jvm-h2hc-2017">
-							<img width='400' alt='A8' src='./img/A8.jpg' data-lazy-loaded>
+							<img width='600' alt='A8' src='./img/A8.jpg' data-lazy-loaded>
 						</a>
 					</div>
 				</section>
@@ -473,12 +486,12 @@
 				<p style="color: coral;">A9. Using Components with Known Vulnerabilities</p>
 				<section>
 					<br>
-					<p style="font-size: 25px">
+					<!-- <p style="font-size: 25px">
 						It is when a web app actively includes components which have publicly-known vulnerabilities.
-					</p>
-					<a href="https://gbhackers.com/9-using-components-known-vulnerabilities/">
-						<img width='550' alt='A9' src='./img/A9.png' data-lazy-loaded style="background-color: wheat;">
-					</a>
+					</p> -->
+					<!-- <a href="https://gbhackers.com/9-using-components-known-vulnerabilities/"> -->
+						<img width='600' alt='A9' src='./img/Fun - A9.gif' data-lazy-loaded>
+					<!-- </a> -->
 				</section>
 				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
@@ -520,11 +533,11 @@
 							organizations can potentially see and stop suspicious activity.
 						</p> -->
 						<a href="https://www.infosecinstitute.com/content-library/insufficient-logging-and-monitoring/">
-							<img width='400' alt='A10' src='./img/a10.png' data-lazy-loaded>
+							<img width='600' alt='A10' src='./img/Fun - A10.png' data-lazy-loaded>
 						</a>
 					</div>
 				</section>
-				<section>
+				<!-- <section>
 					<p style="color: rgb(245, 13, 13);">When it happens?</p>
 					<ul style="font-size: 25px">
 						<li>When important events such as logins, login attempts, and significant transactions are not
@@ -533,7 +546,7 @@
 						<li>Alerts and response escalation processes either don’t exist or are ineffective.
 						</li>
 					</ul>
-				</section>
+				</section> -->
 				<section>
 					<p style="color: rgb(2, 206, 87);">How to prevent?</p>
 					<ul style="font-size: 25px">
@@ -578,6 +591,9 @@
 						target="_blank">Another article at Medium.</a>
 					<br>
 				</p>
+			</section>
+			<section>
+				<img width="300" src="./img/nevsky.jpg" alt='chiken'>
 			</section>
 		</div>
 	</div>

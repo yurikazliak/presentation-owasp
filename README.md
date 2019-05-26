@@ -45,12 +45,12 @@ Identify all data which could be considered ‘sensitive’. Note where and how 
 Next    
 (slide A4)    
 XML External Entities (XXE)    
-XML is a data format used to describe different data elements. XML also uses “entities” to help define related data, but entities can access remote or local content.    
-(slide A4 - 2)    
-An attacker sends malicious data lookup values asking the site, device, or app to request and display data from a local file. If a developer uses a common or default filename in a common location, an attacker’s job is easy.    
+Web application may directly accept XML and process it itself, or use XML parser to parse XML input, or file. And sometimes XML document contains referense to external entities. So if attacker put some malicious payload into external entitie, and XML parser doesn't configurate well, this payload coud get run and then it can do bad things. Stole you local passwords, for example.
+(slide A4 - 2)       
+There is one of the examples of this type of attacks, named "Billion laughs". This document's size is about 1kb, but if we send it into XML parser, it will use approximately 3Gb of memory to crunch thru this entire document!    
 Prevent    
 (slide A4 - 3)    
-Write security-conscious code, avoid serialisation of sensitive data, use JSON instead od XML.    
+Write security-conscious code, avoid serialisation of sensitive data, use JSON instead of XML, run source code analysis tool.    
 Next    
 (slide A5)    
 Broken Access Control.    
@@ -70,19 +70,17 @@ Next
 Cross-Site Scripting (XSS)    
 One of the better-known vulnerabilities.     
 Put simply, Cross-Site Scripting allows an attacker to execute script(s) in a victim’s browser.    
-This can be used to hijack user sessions (by getting cookies, session ID’s and so on), alter the contents of a web page or redirect a user to an evil site.    
-(slide A7 - 2)    
-There are 3 types of XSS: two commons and one lesser-known.    
-(slide A7 - 3)    
+This can be used to hijack user sessions (by getting cookies, session ID’s and so on), alter the contents of a web page or redirect a user to an evil site.   
 Happens when the web app or API stores user input which is unsanitised, unescaped, unvalidated or fails to be encoded.     
 prevent    
 (slide A7 - 4)     
 Employ a combination of validating, filtering, encoding and escaping methods to prevent untrusted user input from executing on the web app.     
 Next     
 (slide A8)    
-Insecure Deserialisation   
-Deserialisation: transforming serialised data from a file, stream or network socket into an object.    
-Fundamentally, an application is likely vulnerable to this type of attack if it deserialises untrusted or tampered data inputted from a malicious source.     
+Insecure Deserialisation  
+Serialisation: transforming object into byte stream; 
+Deserialisation: transforming serialised data from a file, stream or network socket into an object.   
+So, how can that be a problem? If we take untrusted user input, and dont validate them, and allow it to be deserealized from byte stream back to an object, then potencialy we can have an attack vector.
 prevent    
 (slide A8 - 2)     
 the only safe architectural pattern is not to accept serialised objects from untrusted sources or to use serialisation mediums that only permit primitive data types    
